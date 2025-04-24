@@ -1,0 +1,12 @@
+.estilo-label{
+    -fx-padding: 5;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+.estilo-label:hover{
+    -fx-cursor: HAND;
+    -fx-background-color: #E9F1FA;
+    -fx-text-fill: black;
+}
+
+

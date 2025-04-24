@@ -1,0 +1,45 @@
+package org.proyecto.escuela.Modell;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AlumnoModell extends PersonaModell{
+    private String seccion;
+    private String clave;
+
+    static List<AlumnoModell> listaAlumnos = new ArrayList<>();
+
+    public AlumnoModell() {
+    }
+
+    public AlumnoModell(String nombre, String apellido, int edad, String seccion, String clave) {
+        super(nombre, apellido, edad);
+        this.seccion = seccion;
+        this.clave = clave;
+    }
+
+
+    public String getSeccion() {
+        return seccion;
+    }
+
+    public void setSeccion(String seccion) {
+        this.seccion = seccion;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    public void agregarAlumno(AlumnoModell alumno) {
+        listaAlumnos.add(alumno);
+    }
+
+    public void eliminarAlumno(int id) {
+        listaAlumnos.remove(id);
+    }
+}
