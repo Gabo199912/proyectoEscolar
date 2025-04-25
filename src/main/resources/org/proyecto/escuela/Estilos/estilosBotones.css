@@ -9,4 +9,16 @@
     -fx-text-fill: black;
 }
 
+.agregar-alumno{
+    -fx-padding: 5;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+
+}
+
+.agregar-alumno:hover{
+    -fx-cursor: HAND;
+    -fx-background-color: #E9F1FA;
+    -fx-text-fill: black;
+}
 

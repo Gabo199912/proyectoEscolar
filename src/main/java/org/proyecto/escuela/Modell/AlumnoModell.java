@@ -42,4 +42,13 @@ public class AlumnoModell extends PersonaModell{
     public void eliminarAlumno(int id) {
         listaAlumnos.remove(id);
     }
+
+    public void modificarAlumno(int id, AlumnoModell alumno) {
+        listaAlumnos.set(id, alumno);
+    }
+
+    public AlumnoModell listarAlumno(int id) {
+        return listaAlumnos.get(id);
+    }
+
 }

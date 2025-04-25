@@ -19,7 +19,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="lblMaestros" alignment="CENTER" layoutY="148.0" onMouseClicked="#encenderPaneMaestros" prefHeight="28.0" prefWidth="115.0" styleClass="estilo-label" text="MAESTROS" textFill="WHITE">
+            <Label fx:id="lblMaestros" alignment="CENTER" layoutY="211.0" onMouseClicked="#encenderPaneMaestros" prefHeight="28.0" prefWidth="115.0" styleClass="estilo-label" text="MAESTROS" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -27,7 +27,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Label>
-            <Label fx:id="lblDirector" alignment="CENTER" layoutY="202.0" onMouseClicked="#encenderPaneDirector" prefHeight="28.0" prefWidth="115.0" styleClass="estilo-label" text="DIRECTOR" textFill="WHITE">
+            <Label fx:id="lblDirector" alignment="CENTER" layoutY="163.0" onMouseClicked="#encenderPaneDirector" prefHeight="28.0" prefWidth="115.0" styleClass="estilo-label" text="DIRECTOR" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -44,14 +44,69 @@
                </cursor>
             </Label>
          </children></AnchorPane>
-      <AnchorPane fx:id="pnMaestros" layoutX="115.0" prefHeight="500.0" prefWidth="647.0" style="-fx-background-color: #00ABE4;" visible="true">
+      <AnchorPane fx:id="pnMaestros" layoutX="115.0" prefHeight="500.0" prefWidth="647.0" style="-fx-background-color: #00ABE4;" visible="false">
          <children>
             <ImageView fitHeight="120.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" translateX="490.0" translateY="30.0">
                <image>
                   <Image url="@../imagenes/03iconoMaestros.png" />
                </image></ImageView>
          </children></AnchorPane>
-      <AnchorPane fx:id="pnDirector" layoutX="115.0" prefHeight="500.0" prefWidth="647.0" style="-fx-background-color: #88DC65;" visible="false" />
-      <AnchorPane fx:id="pnAlumnos" layoutX="115.0" prefHeight="500.0" prefWidth="647.0" style="-fx-background-color: #de33f8;" visible="false" />
+      <AnchorPane fx:id="pnDirector" layoutX="114.0" prefHeight="500.0" prefWidth="647.0" style="-fx-background-color: #88DC65;" visible="true">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="156.0" layoutX="433.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" x="48.0">
+               <image>
+                  <Image url="@../imagenes/04iconoDirector.png" />
+               </image>
+            </ImageView>
+            <TabPane layoutX="14.0" layoutY="128.0" prefHeight="356.0" prefWidth="619.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="MAESTROS">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField layoutX="82.0" layoutY="14.0" />
+                              <Label layoutX="14.0" layoutY="18.0" prefHeight="18.0" prefWidth="64.0" text="NOMBRE">
+                                 <font>
+                                    <Font name="Arial Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="82.0" layoutY="45.0" />
+                              <Label layoutX="14.0" layoutY="49.0" prefHeight="18.0" prefWidth="64.0" text="APELLIDO">
+                                 <font>
+                                    <Font name="Arial Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="82.0" layoutY="76.0" />
+                              <Label layoutX="14.0" layoutY="80.0" prefHeight="18.0" prefWidth="64.0" text="EDAD">
+                                 <font>
+                                    <Font name="Arial Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="389.0" layoutY="14.0" />
+                              <Label layoutX="289.0" layoutY="18.0" prefHeight="18.0" prefWidth="96.0" text="ESPECIALIDAD">
+                                 <font>
+                                    <Font name="Arial Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="389.0" layoutY="45.0" />
+                              <Label layoutX="289.0" layoutY="49.0" prefHeight="18.0" prefWidth="96.0" text="ESPECIALIDAD">
+                                 <font>
+                                    <Font name="Arial Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="14.0" layoutY="118.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="AGREGAR" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="ALUMNOS">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="pnAlumnos" layoutX="114.0" prefHeight="500.0" prefWidth="647.0" style="-fx-background-color: #de33f8;" visible="false" />
    </children>
 </AnchorPane>

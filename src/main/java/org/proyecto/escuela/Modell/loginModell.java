@@ -15,8 +15,6 @@ public class loginModell {
     private String contrasenia;
 
 
-
-
     public boolean IngresarUsuario(String _nombreUsuario, String _Contrasenia) {
             nombreUsuario = "";
             contrasenia = "";

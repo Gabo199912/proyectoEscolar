@@ -14,7 +14,6 @@ public class PersonaModell {
         this.edad = edad;
     }
 
-
     public String getNombre() {
         return nombre;
     }
