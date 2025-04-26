@@ -64,31 +64,31 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TextField fx:id="txtNombre" layoutX="82.0" layoutY="14.0" />
+                              <TextField fx:id="txtNombreMaestro" layoutX="82.0" layoutY="14.0" />
                               <Label layoutX="14.0" layoutY="18.0" prefHeight="18.0" prefWidth="64.0" text="NOMBRE">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtApellido" layoutX="82.0" layoutY="45.0" />
+                              <TextField fx:id="txtApellidoMaestro" layoutX="82.0" layoutY="45.0" />
                               <Label layoutX="14.0" layoutY="49.0" prefHeight="18.0" prefWidth="64.0" text="APELLIDO">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtEdad" layoutX="82.0" layoutY="76.0" />
+                              <TextField fx:id="txtEdadMaestro" layoutX="82.0" layoutY="76.0" />
                               <Label layoutX="14.0" layoutY="80.0" prefHeight="18.0" prefWidth="64.0" text="EDAD">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtEspecialidad" layoutX="389.0" layoutY="14.0" />
+                              <TextField fx:id="txtEspecialidadMaestro" layoutX="389.0" layoutY="14.0" />
                               <Label layoutX="289.0" layoutY="18.0" prefHeight="18.0" prefWidth="96.0" text="ESPECIALIDAD">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="txtClase" layoutX="389.0" layoutY="45.0" />
+                              <TextField fx:id="txtClaseMaestro" layoutX="389.0" layoutY="45.0" />
                               <Label layoutX="289.0" layoutY="49.0" prefHeight="18.0" prefWidth="96.0" text="CLASE">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
@@ -118,7 +118,57 @@
                 </Tab>
                 <Tab text="ALUMNOS">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" layoutX="8.0" layoutY="14.0" prefHeight="18.0" prefWidth="73.0" text="NOMBRE">
+                                 <font>
+                                    <Font name="Arial Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtNombreAlumno" layoutX="84.0" layoutY="11.0" />
+                              <Label alignment="TOP_LEFT" layoutX="9.0" layoutY="46.0" prefHeight="18.0" prefWidth="73.0" text="APELLIDO">
+                                 <font>
+                                    <Font name="Arial Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtApellidoAlumno" layoutX="85.0" layoutY="43.0" />
+                              <Label alignment="TOP_LEFT" layoutX="9.0" layoutY="78.0" prefHeight="18.0" prefWidth="73.0" text="EDAD">
+                                 <font>
+                                    <Font name="Arial Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtEdadAlumno" layoutX="85.0" layoutY="75.0" />
+                              <Label alignment="TOP_LEFT" layoutX="339.0" layoutY="13.0" prefHeight="18.0" prefWidth="73.0" text="SECCION">
+                                 <font>
+                                    <Font name="Arial Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtSeccionAlumno" layoutX="415.0" layoutY="10.0" />
+                              <Label alignment="TOP_LEFT" layoutX="339.0" layoutY="45.0" prefHeight="18.0" prefWidth="73.0" text="CLAVE">
+                                 <font>
+                                    <Font name="Arial Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtClaveAlumno" layoutX="415.0" layoutY="42.0" />
+                              <TableView fx:id="tblAlumnos" layoutX="7.0" layoutY="143.0" prefHeight="170.0" prefWidth="606.0">
+                                <columns>
+                                  <TableColumn fx:id="colIDAlumno" prefWidth="36.20001220703125" text="ID" />
+                                  <TableColumn fx:id="colNombreAlumno" prefWidth="114.20001220703125" text="NOMBRE" />
+                                   <TableColumn fx:id="colApellidoAlumno" prefWidth="113.20001220703125" text="APELLIDO" />
+                                   <TableColumn fx:id="colEdadAlumno" prefWidth="60.60003662109375" text="EDAD" />
+                                   <TableColumn fx:id="colSeccionAlumno" prefWidth="104.79998779296875" text="SECCION" />
+                                   <TableColumn fx:id="colClaveAlumno" prefWidth="112.79998779296875" text="CLAVE" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="181.0" layoutY="110.0" mnemonicParsing="false" onAction="#agregarListaAlumnos" text="AGREGAR" />
+                              <Button layoutX="107.0" layoutY="110.0" mnemonicParsing="false" onAction="#eliminarAlumnos" text="ELIMINAR" />
+                              <Label alignment="TOP_LEFT" layoutX="339.0" layoutY="75.0" prefHeight="18.0" prefWidth="73.0" text="ID ALUMNO">
+                                 <font>
+                                    <Font name="Arial Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtIDAlumno" layoutX="415.0" layoutY="72.0" />
+                           </children></AnchorPane>
                   </content>
                 </Tab>
               </tabs>

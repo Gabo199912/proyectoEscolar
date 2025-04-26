@@ -30,28 +30,28 @@ public class generalViewController {
     private AnchorPane pnAlumnos;
 
     @FXML
-    private TextField txtNombre, txtApellido, txtEdad, txtEspecialidad, txtClase, txtIDMaestro;
+    private TextField txtNombreMaestro, txtApellidoMaestro, txtEdadMaestro, txtEspecialidadMaestro, txtClaseMaestro, txtIDMaestro;
+
+    @FXML
+    private TextField txtNombreAlumno, txtApellidoAlumno, txtEdadAlumno, txtSeccionAlumno, txtClaveAlumno, txtIDAlumno;
 
     @FXML
     private TableView<MaestrosModell> tblMaestros;
 
     @FXML
-    private TableColumn<MaestrosModell, String> colNombre;
-
-    @FXML
-    private TableColumn<MaestrosModell, String> colApellido;
-
-    @FXML
-    private TableColumn<MaestrosModell, String> colEdad;
-
-    @FXML
-    private TableColumn<MaestrosModell, String> colEspecialidad;
-
-    @FXML
-    private TableColumn<MaestrosModell, String> colClase;
+    private TableColumn<MaestrosModell, String> colNombre, colApellido, colEdad, colEspecialidad, colClase;
 
     @FXML
     private TableColumn<MaestrosModell, Integer> colIDMaestro;
+
+    @FXML
+    private TableColumn<AlumnoModell, String> colNombreAlumno, colApellidoAlumno, colEdadAlumno, colSeccionAlumno, colClaveAlumno;
+
+    @FXML
+    private TableColumn<AlumnoModell, Integer> colIDAlumno;
+
+    @FXML
+    private  TableView<AlumnoModell> tblAlumnos;
 
 
     @FXML
@@ -70,13 +70,14 @@ public class generalViewController {
         pnAlumnos.setVisible(!pnAlumnos.isVisible());
     }
 
+    //CONTROLADORES DE MAESTROS---------------------------------------------------------------------------
 
     public void agregarListaMaestros(){
-        String nombre = txtNombre.getText();
-        String apellido = txtApellido.getText();
-        String especialidad = txtEspecialidad.getText();
-        String clase = txtClase.getText();
-        String edad = txtEdad.getText();
+        String nombre = txtNombreMaestro.getText();
+        String apellido = txtApellidoMaestro.getText();
+        String especialidad = txtEspecialidadMaestro.getText();
+        String clase = txtClaseMaestro.getText();
+        String edad = txtEdadMaestro.getText();
 
 
         maestro.agregarMaestro(new MaestrosModell(nombre, apellido, edad, especialidad, clase));
@@ -95,11 +96,11 @@ public class generalViewController {
 
     @FXML
     public void initialize() {
-        iniciarTabla();
+        iniciarTablaMaestros(); iniciarTablaAlumos();
     }
 
     @FXML
-    public void iniciarTabla() {
+    public void iniciarTablaMaestros() {
 
         colIDMaestro.setCellValueFactory(cellData -> {
             int index = tblMaestros.getItems().indexOf(cellData.getValue());
@@ -122,12 +123,59 @@ public class generalViewController {
 
 
     public void limpiarEspacios(){
-        txtNombre.setText("");
-        txtApellido.setText("");
-        txtEdad.setText("");
-        txtClase.setText("");
+        txtNombreMaestro.setText("");
+        txtApellidoMaestro.setText("");
+        txtEdadMaestro.setText("");
+        txtClaseMaestro.setText("");
         txtIDMaestro.setText("");
-        txtEspecialidad.setText("");
+        txtEspecialidadMaestro.setText("");
+    }
+
+    //FINALIZA LOS CONTROLADORES DE MAESTROS-----------------------------------------------------------------------------------
+
+
+
+
+    //INICIAN LOS CONTROLADORES DE ALUMNOS--------------------------------------------------------------------------
+
+
+
+
+    public void agregarListaAlumnos(){
+        String nombre = txtNombreAlumno.getText();
+        String apellido = txtApellidoAlumno.getText();
+        String edad = txtEdadAlumno.getText();
+        String seccion = txtSeccionAlumno.getText();
+        String clave = txtClaveAlumno.getText();
+
+        alumno.agregarAlumno(new AlumnoModell(nombre, apellido, edad, seccion, clave));
+        actualizarTablaAlumnos();
+    }
+
+    public void eliminarAlumnos(){
+        int ID = Integer.parseInt(txtIDAlumno.getText());
+        alumno.eliminarAlumno(ID);
+        actualizarTablaAlumnos();
+    }
+
+    public void iniciarTablaAlumos(){
+
+        colIDAlumno.setCellValueFactory(cellData -> {
+            int index = tblAlumnos.getItems().indexOf(cellData.getValue());
+            return new SimpleIntegerProperty(index + 1).asObject();
+        });
+
+        colNombreAlumno.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
+        colApellidoAlumno.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getApellido()));
+        colEdadAlumno.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getEdad()));
+        colSeccionAlumno.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getSeccion()));
+        colClaveAlumno.setCellValueFactory(cellDAta -> new SimpleStringProperty(cellDAta.getValue().getClave()));
+
+        actualizarTablaAlumnos();
+    }
+
+    public void actualizarTablaAlumnos(){
+        tblAlumnos.getItems().setAll(alumno.getListaAlumnos());
     }
 
 

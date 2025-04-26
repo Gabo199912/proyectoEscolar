@@ -7,7 +7,7 @@ public class AlumnoModell extends PersonaModell{
     private String seccion;
     private String clave;
 
-    static List<AlumnoModell> listaAlumnos = new ArrayList<>();
+    public static List<AlumnoModell> listaAlumnos = new ArrayList<>();
 
     public AlumnoModell() {
     }
@@ -51,4 +51,8 @@ public class AlumnoModell extends PersonaModell{
         return listaAlumnos.get(id);
     }
 
+
+    public static List<AlumnoModell> getListaAlumnos() {
+        return listaAlumnos;
+    }
 }
