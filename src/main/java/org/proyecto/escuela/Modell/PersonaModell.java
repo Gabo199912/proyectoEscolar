@@ -3,12 +3,12 @@ package org.proyecto.escuela.Modell;
 public class PersonaModell {
     private String nombre;
     private String apellido;
-    private int edad;
+    private String edad;
 
     public PersonaModell() {
     }
 
-    public PersonaModell(String nombre, String apellido, int edad) {
+    public PersonaModell(String nombre, String apellido, String edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -30,11 +30,11 @@ public class PersonaModell {
         this.apellido = apellido;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 }

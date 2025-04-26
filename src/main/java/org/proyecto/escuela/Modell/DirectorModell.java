@@ -6,7 +6,7 @@ public class DirectorModell extends PersonaModell{
     public DirectorModell() {
     }
 
-    public DirectorModell(String nombre, String apellido, int edad, String puestoDireccion) {
+    public DirectorModell(String nombre, String apellido, String edad, String puestoDireccion) {
         super(nombre, apellido, edad);
         PuestoDireccion = puestoDireccion;
     }

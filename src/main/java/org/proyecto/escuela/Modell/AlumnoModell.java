@@ -12,7 +12,7 @@ public class AlumnoModell extends PersonaModell{
     public AlumnoModell() {
     }
 
-    public AlumnoModell(String nombre, String apellido, int edad, String seccion, String clave) {
+    public AlumnoModell(String nombre, String apellido, String edad, String seccion, String clave) {
         super(nombre, apellido, edad);
         this.seccion = seccion;
         this.clave = clave;

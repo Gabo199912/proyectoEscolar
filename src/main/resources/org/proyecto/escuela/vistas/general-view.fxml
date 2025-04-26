@@ -64,37 +64,54 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TextField layoutX="82.0" layoutY="14.0" />
+                              <TextField fx:id="txtNombre" layoutX="82.0" layoutY="14.0" />
                               <Label layoutX="14.0" layoutY="18.0" prefHeight="18.0" prefWidth="64.0" text="NOMBRE">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="82.0" layoutY="45.0" />
+                              <TextField fx:id="txtApellido" layoutX="82.0" layoutY="45.0" />
                               <Label layoutX="14.0" layoutY="49.0" prefHeight="18.0" prefWidth="64.0" text="APELLIDO">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="82.0" layoutY="76.0" />
+                              <TextField fx:id="txtEdad" layoutX="82.0" layoutY="76.0" />
                               <Label layoutX="14.0" layoutY="80.0" prefHeight="18.0" prefWidth="64.0" text="EDAD">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="389.0" layoutY="14.0" />
+                              <TextField fx:id="txtEspecialidad" layoutX="389.0" layoutY="14.0" />
                               <Label layoutX="289.0" layoutY="18.0" prefHeight="18.0" prefWidth="96.0" text="ESPECIALIDAD">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="389.0" layoutY="45.0" />
-                              <Label layoutX="289.0" layoutY="49.0" prefHeight="18.0" prefWidth="96.0" text="ESPECIALIDAD">
+                              <TextField fx:id="txtClase" layoutX="389.0" layoutY="45.0" />
+                              <Label layoutX="289.0" layoutY="49.0" prefHeight="18.0" prefWidth="96.0" text="CLASE">
                                  <font>
                                     <Font name="Arial Italic" size="12.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="14.0" layoutY="118.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="AGREGAR" />
+                              <Button layoutX="158.0" layoutY="116.0" mnemonicParsing="false" onAction="#agregarListaMaestros" prefHeight="26.0" prefWidth="73.0" text="AGREGAR" />
+                              <TableView fx:id="tblMaestros" layoutX="14.0" layoutY="153.0" prefHeight="169.0" prefWidth="591.0">
+                                <columns>
+                                  <TableColumn fx:id="colIDMaestro" prefWidth="97.20001220703125" text="ID MAESTRO" />
+                                  <TableColumn fx:id="colNombre" prefWidth="69.59999084472656" text="NOMBRE" />
+                                   <TableColumn fx:id="colApellido" prefWidth="72.0" text="APELLIDO" />
+                                   <TableColumn fx:id="colEdad" prefWidth="63.20001220703125" text="EDAD" />
+                                   <TableColumn fx:id="colEspecialidad" prefWidth="110.20001220703125" text="ESPECIALIDAD" />
+                                   <TableColumn fx:id="colClase" prefWidth="55.800048828125" text="CLASE" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="70.0" layoutY="117.0" mnemonicParsing="false" onMouseClicked="#eliminarMaestro" prefHeight="26.0" prefWidth="73.0" text="ELIMINAR" />
+                              <TextField fx:id="txtIDMaestro" layoutX="389.0" layoutY="76.0" />
+                              <Label layoutX="289.0" layoutY="80.0" prefHeight="18.0" prefWidth="96.0" text="ID MAESTRO">
+                                 <font>
+                                    <Font name="Arial Italic" size="12.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
                   </content>
